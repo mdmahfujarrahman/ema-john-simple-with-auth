@@ -19,19 +19,21 @@ const Orders = () => {
 
     
     return (
-        <div className='shop-container'>
+        <div className="shop-container">
             <div className="review-items-container">
-                {
-                    cart.map(product => <ReviewItem
+                {cart.map((product) => (
+                    <ReviewItem
                         key={product.id}
-                        product ={product}
-                        handleRemoveProduct = {handleRemoveProduct}
-                    ></ReviewItem>)
-                }
+                        product={product}
+                        handleRemoveProduct={handleRemoveProduct}
+                    ></ReviewItem>
+                ))}
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
-                        <button onClick={()=>navigate('/inventory')}>Proceed Checkout </button>
+                    <button onClick={() => navigate("/shipment")}>
+                        Proceed Shipment
+                    </button>
                 </Cart>
             </div>
         </div>
